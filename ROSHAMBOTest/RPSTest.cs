@@ -35,7 +35,7 @@ namespace ROSHAMBOTest
         }
 
         [Fact]
-        public void ScissorsBeatsPaperTesT()
+        public void ScissorsBeatsPaperTest()
         {
             //Arrange
             var expectedResult = 1;
@@ -43,6 +43,20 @@ namespace ROSHAMBOTest
 
             //Act
             int result = rps.PlayRound("scissors", "paper");
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
+
+        [Fact]
+        public void SameChoiceResultsInTieTest()
+        {
+            //Arrange
+            var expectedResult = 2;
+            RPS rps = new RPS();
+
+            //Act
+            int result = rps.PlayRound("rock", "rock");
 
             //Assert
             Assert.Equal(expectedResult, result);
