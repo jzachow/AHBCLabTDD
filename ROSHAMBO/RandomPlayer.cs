@@ -9,12 +9,14 @@ namespace ROSHAMBO
         public string GenerateChoice()
         {
             Random random = new Random();
-            int choice = random.Next(2);
+            int choice = random.Next(3);
 
             switch (choice)
             {
                 case 0:
-                    return "paper";                
+                    return "paper";
+                case 1:
+                    return "scissors";
                 default:                
                     return "rock";
             }           

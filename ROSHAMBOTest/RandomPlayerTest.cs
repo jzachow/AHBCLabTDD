@@ -43,5 +43,23 @@ namespace ROSHAMBOTest
             //Assert
             Assert.Equal(expectedresult, result);
         }
+
+        [Fact]
+        public void RandomPlayerCanReturnScissorsTest()
+        {
+            //Arrange
+            var expectedresult = "scissors";
+            var randomPlayer = new RandomPlayer();
+            string result = string.Empty;
+
+            //Act
+            do
+            {
+                result = randomPlayer.GenerateChoice();
+            } while (!result.Equals("scissors"));
+
+            //Assert
+            Assert.Equal(expectedresult, result);
+        }
     }
 }
