@@ -29,6 +29,22 @@ namespace ROSHAMBOTest
             var humanPlayer = new HumanPlayer("Justin");
 
             //Act
+            Console.SetIn(new System.IO.StringReader("1"));
+            string result = humanPlayer.GetChoice();
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
+
+        [Fact]
+        public void HumanPlayerCanReturnPaperTest()
+        {
+            //Arrange
+            var expectedResult = "paper";
+            var humanPlayer = new HumanPlayer("Justin");
+
+            //Act
+            Console.SetIn(new System.IO.StringReader("2"));
             string result = humanPlayer.GetChoice();
 
             //Assert
