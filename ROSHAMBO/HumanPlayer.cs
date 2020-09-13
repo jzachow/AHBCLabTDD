@@ -11,5 +11,10 @@ namespace ROSHAMBO
         {
             Name = name;
         }
+
+        public string GetChoice()
+        {
+            return "rock";
+        }
     }
 }

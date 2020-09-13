@@ -20,5 +20,19 @@ namespace ROSHAMBOTest
 
             Assert.Equal(expectedResult, result);
         }
+
+        [Fact]
+        public void HumanPlayerCanReturnRockTest()
+        {
+            //Arrange
+            var expectedResult = "rock";
+            var humanPlayer = new HumanPlayer("Justin");
+
+            //Act
+            string result = humanPlayer.GetChoice();
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
     }
 }
