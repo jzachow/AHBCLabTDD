@@ -8,8 +8,10 @@ namespace ROSHAMBO
         {
             if (playerChoice.Equals("rock") && gameChoice.Equals("scissors"))
                 return 1;
-            else
-                return 0;
+            if (playerChoice.Equals("paper") && gameChoice.Equals("rock"))
+                return 1;
+
+            return 0;
         }
     }
 }
