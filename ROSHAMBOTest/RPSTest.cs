@@ -56,10 +56,15 @@ namespace ROSHAMBOTest
             RPS rps = new RPS();
 
             //Act
-            int result = rps.PlayRound("rock", "rock");
+            int result1 = rps.PlayRound("rock", "rock");
+            int result2 = rps.PlayRound("paper", "paper");
+            int result3 = rps.PlayRound("scissors", "scissors");
 
             //Assert
-            Assert.Equal(expectedResult, result);
+            Assert.Equal(expectedResult, result1);
+            Assert.Equal(expectedResult, result2);
+            Assert.Equal(expectedResult, result3);
         }
+
     }
 }
