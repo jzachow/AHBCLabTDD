@@ -6,6 +6,8 @@ namespace ROSHAMBO
     {
         public int PlayRound(string playerChoice, string gameChoice)
         {
+            playerChoice = playerChoice.ToLower();
+            gameChoice = gameChoice.ToLower();
             int result = 0;
 
             if (playerChoice.Equals(gameChoice))

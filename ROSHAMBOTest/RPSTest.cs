@@ -66,5 +66,20 @@ namespace ROSHAMBOTest
             Assert.Equal(expectedResult, result3);
         }
 
+        [Fact]
+        public void LetterCaseDoesNotAffectResultsTest()
+        {
+            //Arrange
+            var expectedResult = 1;
+            RPS rps = new RPS();
+
+            //Act
+            int result = rps.PlayRound("rOcK", "SCISSORS");
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+
+        }
+
     }
 }
