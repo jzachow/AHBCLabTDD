@@ -50,5 +50,20 @@ namespace ROSHAMBOTest
             //Assert
             Assert.Equal(expectedResult, result);
         }
+
+        [Fact]
+        public void HumanPlayerCanReturnScissorsTest()
+        {
+            //Arrange
+            var expectedResult = "scissors";
+            var humanPlayer = new HumanPlayer("Justin");
+
+            //Act
+            Console.SetIn(new System.IO.StringReader("3"));
+            string result = humanPlayer.GetChoice();
+
+            //Assert
+            Assert.Equal(expectedResult, result);
+        }
     }
 }

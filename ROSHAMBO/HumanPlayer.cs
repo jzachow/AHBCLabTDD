@@ -14,15 +14,17 @@ namespace ROSHAMBO
 
         public string GetChoice()
         {
-            Console.WriteLine("Please enter your choice: 1. Rock 2. Paper");
+            Console.WriteLine("Please enter your choice: 1. Rock 2. Paper 3. Scissors");
             int userInput = int.Parse(Console.ReadLine());
 
             switch (userInput)
             {
                 case 1:
                     return "rock";
-                default:
+                case 2:
                     return "paper";
+                default:
+                    return "scissors";
             }           
         }
     }
